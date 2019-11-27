@@ -1,0 +1,17 @@
+<form  #newUser="ngForm" (ngSubmit)="iniciaCompetitor(newUser)" >
+    <h2 class="form-title">Inicio sesion</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <label>Correo:</label>
+            <input type="text" id="address" name="address" class="form-control" placeholder="Address"
+                   [(ngModel)]="competitorEnvio.address" #nombre= "ngModel" required pattern="[a-zA-Z ]+"/>
+        </div>
+        <div class="col-md-6">
+            <label>Contraseña:</label>
+            <input type="text" id="password" name="password" class="form-control" placeholder="Password"
+                   [(ngModel)]="competitorEnvio.password" #nombre= "ngModel" required pattern="[a-zA-Z ]+"/>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Inicio sesion</button>
+</form>
+
